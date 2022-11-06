@@ -4,7 +4,7 @@ import route from "./routes/index.js"
 
 
 const URI =
-  "mongodb+srv://awalmakka:awalmakka@cluster0.v86wgfg.mongodb.net/?retryWrites=true&w=majority/express-mongo";
+  "mongodb+srv://awalmakka:awalmakka@cluster0.v86wgfg.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
