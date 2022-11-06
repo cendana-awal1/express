@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import route from "./routes/index.js"
+import cors from "cors";
 
 
 const URI =
@@ -13,6 +14,7 @@ db.once("open", () => console.log("Connected to Database"));
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 app.use('/nilai',route);
 
 

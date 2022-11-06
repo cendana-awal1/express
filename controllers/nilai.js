@@ -28,6 +28,11 @@ export const createNilai = async (req, res) => {
   }
 };
 export const updateNilai = async (req, res) => {
+    const cekid = await Nilai.findById(req.params.id);
+    if (!cekid) {
+        return res.status(404).json({ message: "DATA tidak ditemukan" });
+    }
+
   try {
     const ubahNilai = await Nilai.updateOne(
       { _id: req.params.id },
@@ -39,6 +44,10 @@ export const updateNilai = async (req, res) => {
   }
 };
 export const deleteNilai = async (req, res) => {
+    const cekid = await Nilai.findById(req.params.id);
+    if (!cekid) {
+        return res.status(404).json({ message: "DATA tidak ditemukan" });
+    }
   try {
     const deletedNilai = await Nilai.deleteOne({ _id: req.params.id });
     res.status(201).json(deletedNilai);
