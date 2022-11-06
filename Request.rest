@@ -1,3 +1,18 @@
 GET  https://cendana-awal1-glorious-lamp-p479vjgr6gqcrr5g-3000.preview.app.github.dev/nilai
 ###
 POST https://cendana-awal1-glorious-lamp-p479vjgr6gqcrr5g-3000.preview.app.github.dev/nilai
+Content-Type: application/json
+
+{
+  "nama": "Budi",
+  "kelas": "XII",
+  "nh1": 90,
+    "nh2": 80,
+    "nh3": 70,
+    "uts": 50,
+    "uas": 60,
+}
+###
+GET https://express-gules-nine.vercel.app/nilai
+###
+POST https://express-gules-nine.vercel.app/nilai

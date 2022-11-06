@@ -12,6 +12,7 @@ db.once("open", () => console.log("Connected to Database"));
 
 
 const app = express();
+app.use(express.json());
 app.use('/nilai',route);
 
 
