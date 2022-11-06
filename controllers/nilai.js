@@ -9,15 +9,13 @@ export const getNilai = async (req, res) => {
   }
 };
 export const getNilaiById = async (req, res) => {
-    try {
-        const nilai = await Nilai.findById(req.params.id);
-        res.status(200).json(nilai);
-    } catch (error) {
-        res.status(404).json({ message: error.message });
-        
-    }
-}
-
+  try {
+    const nilai = await Nilai.findById(req.params.id);
+    res.status(200).json(nilai);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
 
 export const createNilai = async (req, res) => {
   const nilai = req.body;
@@ -36,6 +34,14 @@ export const updateNilai = async (req, res) => {
       { $set: req.body }
     );
     res.status(201).json(ubahNilai);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
+};
+export const deleteNilai = async (req, res) => {
+  try {
+    const deletedNilai = await Nilai.deleteOne({ _id: req.params.id });
+    res.status(201).json(deletedNilai);
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
