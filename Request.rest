@@ -1,0 +1,3 @@
+GET  https://cendana-awal1-glorious-lamp-p479vjgr6gqcrr5g-3000.preview.app.github.dev/nilai
+###
+POST https://cendana-awal1-glorious-lamp-p479vjgr6gqcrr5g-3000.preview.app.github.dev/nilai
